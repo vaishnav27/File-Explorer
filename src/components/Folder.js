@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { File, FolderMinus } from "lucide-react";
 
 function Folder({ handleInsertNode, explorer }) {
   //   console.log(explorer);
@@ -24,11 +25,21 @@ function Folder({ handleInsertNode, explorer }) {
   if (explorer.isFolder) {
     return (
       <div style={{ marginTop: 10 }}>
-        <div className="folder" onClick={() => setExpand(!expand)}>
-          <span>📁{explorer.name}</span>
+        <div className="folder " onClick={() => setExpand(!expand)}>
+          <span>📁 {explorer.name}</span>
+          {/* <span>
+            📁{" "}
+            {explorer.name.length > 12
+              ? explorer.name.substring(0, 12) + "..."
+              : explorer.name}
+          </span> */}
           <div>
-            <button onClick={(e) => handleNewFolder(e, true)}>folder +</button>
-            <button onClick={(e) => handleNewFolder(e, false)}>file +</button>
+            <button className="btn" onClick={(e) => handleNewFolder(e, true)}>
+              <FolderMinus />
+            </button>
+            <button className="btn" onClick={(e) => handleNewFolder(e, false)}>
+              <File />
+            </button>
           </div>
         </div>
 

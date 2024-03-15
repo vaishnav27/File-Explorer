@@ -17,6 +17,7 @@
 
 .inputContainer>span {
   margin-top: 5px;
+  /* font-size: 18px; */
 }
 
 .inputContainer__input {
@@ -27,15 +28,18 @@
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  font-size: 20px;
 }
 
 .folder>span {
   margin: 0 5px;
+  font-size: 28px;
+  font-family: sans-serif;
 }
 
 .folder>div>button {
   font-size: 15px;
-  background-color: white;
+  /* background-color: white; */
 }
 
 .file {
@@ -43,4 +47,10 @@
   padding-left: 5px;
   display: flex;
   flex-direction: column;
+  font-size: 20px;
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
 }
